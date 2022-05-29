@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hover Effect</title>
+	<style>
+		body{font-family: arial,helvetica;}
+		h1{text-align: center;line-height: 45px;}
+		h1 span{
+			color: #E20404;
+		}
+		.box{
+			width: 390px;
+			margin: 10px auto;
+			position: relative;
+		}
+		.box .box-pic{
+			position: relative;
+			transform-origin: 95% 50% 0;
+			transition: all 0.5s;
+			z-index: 1;
+		}
+		.box .box-pic::after{
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 95%;
+			width: 8px;
+			height: 8px;
+			background: #000;
+			border-radius: 50%;
+		}
+		.box .box-pic img{
+			border-radius: 50%;
+		}
+		.box:hover .box-pic{
+			transform: rotate(-140deg);
+		}
+		.box-content{
+			text-align: center;
+			color: #fff;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: brown;
+			border-radius: 50%;
+			padding: 70px 20px;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<h1><span>Yahoo Baba </span><br>Rotating Card Effect</h1>	
+	<div class="box">
+		<div class="box-pic">
+			<img src="images/webdesigner.jpg" alt="">
+		</div>
+		<div class="box-content">
+			<h2>Web Designer</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, aliquid, animi. Voluptas ipsam, obcaecati nobis ipsum est nulla illo optio!</p>
+		</div>
+	</div>
+
+
+</body>
+</html>
